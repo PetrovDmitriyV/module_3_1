@@ -1,19 +1,19 @@
 calls = 0
 
 
-def count_calls(calls):
+def count_calls():
+    global calls
+    calls += 1
     return calls
 
 
 def string_info(string):
-    global calls
-    calls += 1
+    count_calls()
     return len(string), string.upper(), string.lower()
 
 
 def is_contains(string, list_to_search):
-    global calls
-    calls += 1
+    count_calls()
     a = True
     b = string.lower()
     for i in range(0, len(list_to_search)):
